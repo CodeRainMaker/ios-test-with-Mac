@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TopNavigationViewController">
+            <connections>
+                <outlet property="buttonCenter" destination="qPM-jO-lrw" id="3Ou-RH-QZa"/>
+                <outlet property="buttonLeft" destination="Tc0-WU-sPE" id="ekw-A9-dge"/>
+                <outlet property="buttonRight" destination="TvG-JL-EoD" id="EqU-nm-iG5"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="Tc0-WU-sPE" customClass="TopButton">
+                    <rect key="frame" x="103" y="3" width="55" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="c80-J4-OtG"/>
+                        <constraint firstAttribute="width" constant="55" id="owH-dB-cdQ"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_computer" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="1PH-Lf-1tD">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonClick:" target="-2" id="lSq-gH-hUj"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="qPM-jO-lrw" customClass="TopButton">
+                    <rect key="frame" x="168" y="3" width="55" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="CWO-09-uNK"/>
+                        <constraint firstAttribute="width" constant="55" id="ehR-mE-Xdz"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_task" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="JMe-Th-ePN">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonClick:" target="-2" id="EkP-1A-nMJ"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="TvG-JL-EoD" customClass="TopButton">
+                    <rect key="frame" x="233" y="3" width="55" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="1Tu-Qr-gHx"/>
+                        <constraint firstAttribute="width" constant="55" id="LcD-5u-hs9"/>
+                    </constraints>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="icon_warning" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="9Do-NR-FwB">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="buttonClick:" target="-2" id="xz0-G8-vmV"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Tc0-WU-sPE" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="Dqv-dY-HAN"/>
+                <constraint firstItem="qPM-jO-lrw" firstAttribute="leading" secondItem="Tc0-WU-sPE" secondAttribute="trailing" constant="10" id="KiM-O8-CaY"/>
+                <constraint firstItem="qPM-jO-lrw" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="b0U-oD-MBg"/>
+                <constraint firstItem="TvG-JL-EoD" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="hfl-C4-BPO"/>
+                <constraint firstItem="qPM-jO-lrw" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="lJv-BI-OY3"/>
+                <constraint firstItem="TvG-JL-EoD" firstAttribute="leading" secondItem="qPM-jO-lrw" secondAttribute="trailing" constant="10" id="z2w-Hz-3BD"/>
+            </constraints>
+            <point key="canvasLocation" x="94.5" y="72"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="icon_computer" width="32" height="32"/>
+        <image name="icon_task" width="32" height="32"/>
+        <image name="icon_warning" width="32" height="32"/>
+    </resources>
+</document>
